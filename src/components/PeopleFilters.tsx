@@ -57,21 +57,18 @@ export const PeopleFilters = () => {
       <p className="panel-tabs" data-cy="SexFilter">
         <a
           className={`${!selectedSex ? 'is-active' : ''}`}
-          // href="#/people"
           onClick={() => handleSexChange(null)}
         >
           All
         </a>
         <a
           className={`${selectedSex === 'm' ? 'is-active' : ''}`}
-          // href="#/people?sex=m"
           onClick={() => handleSexChange('m')}
         >
           Male
         </a>
         <a
           className={`${selectedSex === 'f' ? 'is-active' : ''}`}
-          //href="#/people?sex=f"
           onClick={() => handleSexChange('f')}
         >
           Female

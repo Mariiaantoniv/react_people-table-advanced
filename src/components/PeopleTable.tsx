@@ -25,12 +25,6 @@ export const PeopleTable = () => {
         name?.toLowerCase().includes(query),
       );
 
-    /*     const matchesQuery = query
-      ? [person.name, person.motherName, person.fatherName]
-          .filter(Boolean)
-          .some(name => name?.toLowerCase().includes(query))
-      : true; */
-
     const matchesSex = selectedSex ? person.sex === selectedSex : true;
 
     const century = Math.ceil(person.born / 100);
@@ -94,7 +88,9 @@ export const PeopleTable = () => {
     return null;
   }
 
-  return (
+  return filteredPeople.length === 0 ? (
+    <p>There are no people matching the current search criteria</p>
+  ) : (
     <table
       data-cy="peopleTable"
       className="table is-striped is-hoverable is-narrow is-fullwidth"

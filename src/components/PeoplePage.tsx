@@ -22,7 +22,7 @@ export const PeoplePage = () => {
           payload: 'Something went wrong',
         });
       });
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -43,7 +43,6 @@ export const PeoplePage = () => {
                   There are no people on the server
                 </p>
               )}
-              <p>There are no people matching the current search criteria</p>
             </div>
           </div>
         </div>
